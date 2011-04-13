@@ -1,0 +1,20 @@
+#NameVirtualHost *:80
+
+<VirtualHost *:80>
+ServerName localhost
+DocumentRoot /var/www/
+</VirtualHost>
+
+<VirtualHost *:80>
+ServerName *.local
+ServerAlias *.local
+VirtualDocumentRoot /var/www/%1/web
+</VirtualHost>
+
+<VirtualHost *:80>
+ServerName *.drupal
+ServerAlias *.drupal    
+VirtualDocumentRoot /var/www/%1
+</VirtualHost>
+
+
